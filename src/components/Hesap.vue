@@ -1,7 +1,9 @@
 <template>
   <div class="hesap">
     <h1>Proje Ücreti</h1>
-    <form @submit.prevent="lastPrice">
+    <form @submit.prevent="lastPrice"> 
+    <!-- single page app olduğu için
+    submit edildiğinde prevent sayfanın yenilenmesini engeller -->
       <div class="form-group">
         <label for="yapıA">Yapı Alanı</label>
         <input
@@ -126,12 +128,12 @@ export default {
 </script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap%27");
-
 .hesap {
   background-image: url("https://cdn.discordapp.com/attachments/920268099234713653/929370584603832400/walpaper.jpg");
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  font-size: 130%;
   background-size: cover;
   background-position: center;
 }
@@ -154,11 +156,9 @@ label {
   color: aliceblue;
   font-family: "Monospace";
   text-align: "center";
-  height: auto;
 }
 a {
   font-family: "Merriweather", serif;
-  margin-left: 1%;
 }
 input.data {
   width: 97%;
